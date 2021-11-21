@@ -1,0 +1,35 @@
+package Age_Restriction_activity;
+
+/**
+ * @author 18-5613-522
+ */
+import java.util.Scanner;
+public class Age_Activity {
+    public static void main(String[] args) {
+       
+        int myAge;
+        char myChoice;
+        
+        Scanner myScan = new Scanner(System.in);
+        System.out.print("Input your desired age: ");
+        myAge = myScan.nextInt();
+        
+        if (myAge <= 18 ) {
+            //System.out.println("Not Allowed!!!");
+            
+            System.out.print("\nWith Parents or guardian? ");
+            myChoice = myScan.next().charAt(0);
+
+            if (myChoice == 'Y'| myChoice == 'y') {
+                System.out.println("Allowed");
+            }else{
+                System.err.println("Not allowed!!!");
+            }
+            
+        } else {
+            System.out.println("Allowed: Legal Age");
+        }
+        
+    }
+    
+}
